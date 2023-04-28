@@ -3,5 +3,4 @@ use sales;
 -- from sales;
 SELECT *
 from sales
-WHERE is_disputed is TRUE
-    and volume > 500;
+WHERE date_fulfilled - date_created < 5;
