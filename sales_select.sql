@@ -1,6 +1,10 @@
 use sales;
 -- select id + 'Hello'
 -- from sales;
-SELECT *
-from sales
-WHERE date_fulfilled - date_created < 5;
+SELECT customer_name,
+    product_name
+from (
+        SELECT *
+        from sales
+        WHERE volume > 1000
+    ) as result1;
