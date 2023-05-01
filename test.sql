@@ -1,7 +1,7 @@
 use test;
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS employers;
-DROP TABLE IF EXISTS conversation;
+-- DROP TABLE IF EXISTS users;
+-- DROP TABLE IF EXISTS employers;
+-- DROP TABLE IF EXISTS conversation;
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT,
     full_name varchar(300) not null,
@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS users (
     current_status ENUM('self-employed', 'employed', 'unemployed'),
     PRIMARY KEY (id)
 );
-
 CREATE TABLE IF NOT EXISTS companies (
     id INT AUTO_INCREMENT,
     name VARCHAR(250) NOT NULL,
@@ -18,7 +17,6 @@ CREATE TABLE IF NOT EXISTS companies (
     is_hiring BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id)
 );
-
 CREATE TABLE IF NOT EXISTS conversations (
     id INT AUTO_INCREMENT,
     user_id INT,
