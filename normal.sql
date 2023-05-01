@@ -8,7 +8,8 @@ create TABLE IF NOT EXISTS addresses (
     id INT AUTO_INCREMENT,
     street VARCHAR(250),
     number int,
-    city_id int INT REFERENCES cities (id) ON DELETE RESTRICT,
+    city_id int INT,
+    FOREIGN KEY city_id REFERENCES cities (id) ON DELETE RESTRICT,
     PRIMARY KEY (id)
 );
 create TABLE IF NOT EXISTS users (
@@ -16,6 +17,7 @@ create TABLE IF NOT EXISTS users (
     first_name VARCHAR(250),
     last_name VARCHAR(250),
     email VARCHAR(250),
-    address_id INT REFERENCES addresses (id) ON DELETE RESTRICT,
+    address_id INT,
+    FOREIGN KEY address_id REFERENCES addresses (id) ON DELETE RESTRICT,
     PRIMARY KEY (id)
 );
