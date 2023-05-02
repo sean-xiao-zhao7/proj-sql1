@@ -5,7 +5,10 @@ create table if NOT EXISTS employees (
     email VARCHAR(250),
     birthdate DATE,
     team_id int,
-    FOREIGN KEY (team_id) REFERENCES teams(id) on DELETE
+    intranet_id int,
+    CONSTRAINT intranet_id_key FOREIGN KEY (intranet_id) REFERENCES intranet_accounts(id) on DELETE
+    SET NULL,
+        FOREIGN KEY (team_id) REFERENCES teams(id) on DELETE
     set null,
         PRIMARY KEY (id)
 );
