@@ -4,8 +4,8 @@ create table if NOT EXISTS employees (
     name VARCHAR(250) not NULL,
     email VARCHAR(250),
     birthdate DATE,
-    project_id int,
-    FOREIGN KEY (project_id) REFERENCES projects(id) on DELETE
+    team_id int,
+    FOREIGN KEY (team_id) REFERENCES teams(id) on DELETE
     set null,
         PRIMARY KEY (id)
 );
@@ -27,7 +27,9 @@ create table if NOT EXISTS projects (
     deadline TIMESTAMP,
     PRIMARY KEY (id)
 );
-alter table employees
-add COLUMN project_id INT,
-add FOREIGN key (project_id) REFERENCES projects(id) On DELETE
-set NULL;
+create table if NOT EXISTS intranet_accounts (
+    id int,
+    email VARCHAR(250),
+    passowrd VARCHAR(250),
+    PRIMARY KEY (id)
+)
