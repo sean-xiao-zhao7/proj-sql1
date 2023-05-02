@@ -34,6 +34,7 @@ create table if NOT EXISTS intranet_accounts (
     id int,
     email VARCHAR(250),
     passowrd VARCHAR(250),
-    CONSTRAINT employee_id_key FOREIGN KEY (id) REFERENCES employees(intranet_id) ON DELETE CASCADE,
+    employee_id INT,
+    CONSTRAINT employee_id_key FOREIGN KEY (employee_id) REFERENCES employees(intranet_id) ON DELETE CASCADE,
     PRIMARY KEY (id)
 )
