@@ -9,8 +9,8 @@ create table if NOT EXISTS bookings (
     id int AUTO_INCREMENT,
     booking_date TIMESTAMP not null,
     guests int not null,
-    billed boolean default false,
-    tipped boolean default false,
+    billed DECIMAL(6, 3),
+    tipped DECIMAL(5, 3),
     payment_id int,
     table_id int,
     CONSTRAINT payment_id_key FOREIGN KEY (payment_id) REFERENCES payment_methods(id) ON DELETE
