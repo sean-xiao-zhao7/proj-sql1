@@ -1,4 +1,5 @@
 use company;
+START TRANSACTION;
 SELECT CASE
         WHEN weekday = 1 THEN 'MONDAY'
         WHEN weekday = 2 THEN 'TUESDAY'
@@ -11,4 +12,5 @@ SELECT CASE
 FROM (
         SELECT WEEKDAY(birthdate) as weekday
         FROM employees
-    ) as result1
+    ) as result1;
+COMMIT;
