@@ -1,3 +1,4 @@
 use company;
-select TIMESTAMPDIFF(YEAR, NOW(), birthdate)
-FROM employees;
+select *
+FROM employees
+WHERE first_name like 'J%';
