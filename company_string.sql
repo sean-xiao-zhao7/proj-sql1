@@ -1,3 +1,4 @@
 use company;
-select CONCAT(first_name, ' ', last_name)
+select CONVERT(birthdate, DATE),
+    CONVERT(birthdate, TIME)
 FROM employees;
