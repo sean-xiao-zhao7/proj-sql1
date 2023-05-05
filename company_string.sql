@@ -1,4 +1,3 @@
 use company;
-select CONVERT(birthdate, DATE),
-    CONVERT(birthdate, TIME)
+select TIMESTAMPDIFF(YEAR, NOW(), birthdate)
 FROM employees;
