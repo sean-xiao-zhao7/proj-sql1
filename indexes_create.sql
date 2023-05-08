@@ -1,6 +1,8 @@
 use indexes;
 EXPLAIN ANALYZE
 SELECT *
-from users
-where salary > 12000;
+from addresses
+where street like 'Test*'
+    and city = 'Munich';
 -- CREATE UNIQUE INDEX salary_idx ON users (salary);
+-- CREATE INDEX addresses_idx_multi ON addresses (street, city);
