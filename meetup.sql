@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS event (
     event_start_datetime DATETIME DEFAULT NOW(),
     event_description TEXT,
     event_max_members INT DEFAULT 0,
-    event_age_rating VARCHAR(250),
+    event_age_rating VARCHAR(250) DEFAULT 'G',
     event_location_id INT,
     event_category_id INT,
     CONSTRAINT event_location_fkey FOREIGN KEY (event_location_id) REFERENCES location(id) ON DELETE

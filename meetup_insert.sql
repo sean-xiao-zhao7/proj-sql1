@@ -6,8 +6,15 @@ use meetup;
 --     ('City 4', 'State 4', 'Country 4', 'Postal 4'),
 --     ('City 5', 'State 5', 'Country 5', 'Postal 5'),
 --     ('City 6', 'State 6', 'Country 6', 'Postal 6');
-INSERT INTO event_category (event_category_name, event_category_description)
-VALUES (
-        'Event Category 1',
-        'Event Category Description.'
-    );
+-- INSERT INTO event_category (event_category_name, event_category_description)
+-- VALUES (
+--         'Event Category 1',
+--         'Event Category Description.'
+--     );
+-- INSERT INTO event (
+--         event_name,
+--         event_description,
+--         event_location_id,
+--         event_category_id
+--     )
+-- VALUES ('Event 1', 'Event 1 details.', 5, 1);
