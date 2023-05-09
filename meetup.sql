@@ -1,5 +1,10 @@
 -- CREATE DATABASE IF NOT EXISTS meetup;
 use meetup;
+CREATE TABLE IF NOT EXISTS event_category (
+    id INT AUTO_INCREMENT,
+    event_category_name VARCHAR(250) NOT NULL,
+    PRIMARY KEY (id)
+);
 CREATE TABLE IF NOT EXISTS location (
     id INT AUTO_INCREMENT,
     city VARCHAR(250) NOT NULL,
@@ -18,7 +23,10 @@ CREATE TABLE IF NOT EXISTS event (
     event_max_members INT DEFAULT 0,
     event_age_rating VARCHAR(250),
     event_location_id INT,
+    event_category_id INT,
     CONSTRAINT event_location_fkey FOREIGN KEY (event_location_id) REFERENCES location(id) ON DELETE
+    SET NULL,
+        CONSTRAINT event_category_fkey FOREIGN KEY (event_category_id) REFERENCES event_category(id) ON DELETE
     SET NULL,
         PRIMARY KEY (id)
 );
