@@ -1,6 +1,15 @@
 -- CREATE DATABASE IF NOT EXISTS meetup;
 use meetup;
-CREATE TABLE if NOT EXISTS event (
+CREATE TABLE IF NOT EXISTS location (
+    id AUTO_INCREMENT,
+    city VARCHAR(250) NOT NULL,
+    state VARCHAR(250),
+    country VARCHAR(250),
+    postal VARCHAR(250),
+    address VARCHAR(250),
+    PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS event (
     id AUTO_INCREMENT,
     event_name VARCHAR(250) NOT NULL,
     event_image_url VARCHAR(500),
