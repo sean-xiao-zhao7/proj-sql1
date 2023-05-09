@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE IF NOT EXISTS event_category (
     id INT AUTO_INCREMENT,
     event_category_name VARCHAR(250) NOT NULL,
+    event_category_description TEXT,
     PRIMARY KEY (id)
 );
 -- single location/address, belong to many events
